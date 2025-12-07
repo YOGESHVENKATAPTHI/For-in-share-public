@@ -7,7 +7,6 @@
 
 A modern, real-time forum platform with advanced file sharing capabilities, built with React, Express, and WebSocket technology. Features private/public forums, live messaging, partial upload resume, and comprehensive access management.
 
-![ForInShare Preview](https://for-in-share.onrender.com)
 
 ## ✨ Features
 
@@ -272,4 +271,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Built with ❤️ by [Yogesh Venkatapathi](https://github.com/YOGESHVENKATAPTHI)**
+
 
