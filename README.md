@@ -7,6 +7,7 @@
 
 A modern, real-time forum platform with advanced file sharing capabilities, built with React, Express, and WebSocket technology. Features private/public forums, live messaging, partial upload resume, and comprehensive access management.
 
+![https://www.dropbox.com/scl/fi/eidof2kyf0iu2xa5fgm2x/for-in-share-logo.png?rlkey=22qc7oj2q60u9feruupk08sda&st=xjplsrbx&dl=1](https://for-in-share.onrender.com)
 
 ## ✨ Features
 
