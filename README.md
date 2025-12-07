@@ -7,35 +7,40 @@
 
 A modern, real-time forum platform with advanced file sharing capabilities, built with React, Express, and WebSocket technology. Features private/public forums, live messaging, partial upload resume, and comprehensive access management.
 
-![ForInShare Preview](https://via.placeholder.com/800x400/1a1a1a/ffffff?text=ForInShare+Forum+Platform)
+![ForInShare Preview](https://www.dropbox.com/scl/fi/eidof2kyf0iu2xa5fgm2x/for-in-share-logo.png?rlkey=22qc7oj2q60u9feruupk08sda&st=xjplsrbx&dl=1)
 
 ## ✨ Features
 
 ### 🔄 Real-Time Communication
+
 - **Live Messaging**: Instant chat with WebSocket-powered real-time updates
 - **Forum Events**: Live notifications for forum creation, deletion, and member changes
 - **Access Management**: Real-time access request approvals and rejections
 - **File Upload Progress**: Live progress tracking for uploads and downloads
 
 ### 📁 Advanced File Management
+
 - **Partial Upload Resume**: Continue interrupted uploads from where they left off
 - **Distributed Storage**: Integration with Dropbox and Neon Database
 - **File Preview**: Support for images, videos, PDFs, and documents
 - **Chunked Uploads**: Efficient handling of large files with progress tracking
 
 ### 🛡️ Security & Access Control
+
 - **Private Forums**: Invite-only forums with access request system
 - **Role-Based Permissions**: Granular control over forum access and features
 - **Secure Authentication**: Passport.js local strategy with session management
 - **Data Encryption**: Secure transmission and storage of sensitive data
 
 ### 🎨 Modern UI/UX
+
 - **Responsive Design**: Mobile-first approach with adaptive layouts
 - **Dark Theme**: Beautiful zinc-based color scheme optimized for long sessions
 - **Intuitive Navigation**: Clean, modern interface with smooth animations
 - **Accessibility**: WCAG-compliant components with keyboard navigation
 
 ### 🏗️ Architecture
+
 - **Microservices Ready**: Modular architecture with separate client/server
 - **Database**: PostgreSQL with Drizzle ORM for type-safe queries
 - **WebSocket Clusters**: Scalable real-time communication
@@ -53,22 +58,26 @@ A modern, real-time forum platform with advanced file sharing capabilities, buil
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/YOGESHVENKATAPTHI/forum.git
-   cd forum
+   git clone https://github.com/YOGESHVENKATAPTHI/For-in-share-public.git
+   cd For-in-share-public
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Environment Setup**
+
    ```bash
    cp .env.example .env
    ```
 
    Configure your `.env` file with:
+
    ```env
    DATABASE_URL=your_neon_database_url
    DROPBOX_ACCESS_TOKEN=your_dropbox_token
@@ -77,11 +86,13 @@ A modern, real-time forum platform with advanced file sharing capabilities, buil
    ```
 
 4. **Database Setup**
+
    ```bash
    npm run db:push
    ```
 
 5. **Start Development Server**
+
    ```bash
    npm run dev
    ```
@@ -91,18 +102,21 @@ A modern, real-time forum platform with advanced file sharing capabilities, buil
 ## 📖 Usage
 
 ### Creating Forums
+
 1. Navigate to the home page
 2. Click "Create Forum"
 3. Set forum name, description, and privacy settings
 4. Invite members or set as public
 
 ### File Sharing
+
 1. In any forum, click the upload button
 2. Select files or drag and drop
 3. Monitor upload progress in real-time
 4. Share download links with forum members
 
 ### Real-Time Messaging
+
 - **Desktop**: Press Enter to send, Shift+Enter for new lines
 - **Mobile**: Press Enter for new lines, Ctrl+Enter to send
 - Messages appear instantly for all connected users
@@ -110,6 +124,7 @@ A modern, real-time forum platform with advanced file sharing capabilities, buil
 ## 🏗️ Tech Stack
 
 ### Frontend
+
 - **React 18** - Modern React with hooks and concurrent features
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
@@ -118,6 +133,7 @@ A modern, real-time forum platform with advanced file sharing capabilities, buil
 - **Wouter** - Lightweight routing library
 
 ### Backend
+
 - **Express.js** - Fast, unopinionated web framework
 - **WebSocket (ws)** - Real-time bidirectional communication
 - **Passport.js** - Authentication middleware
@@ -125,6 +141,7 @@ A modern, real-time forum platform with advanced file sharing capabilities, buil
 - **PostgreSQL** - Robust relational database
 
 ### Infrastructure
+
 - **Neon Database** - Serverless PostgreSQL
 - **Dropbox API** - Cloud file storage
 - **PM2** - Process manager for production
@@ -172,18 +189,19 @@ npm run workers:4       # Start 4 worker processes
 
 ### Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `DATABASE_URL` | PostgreSQL connection string | Yes |
-| `DROPBOX_ACCESS_TOKEN` | Dropbox API token | Yes |
-| `SESSION_SECRET` | Session encryption key | Yes |
-| `NODE_ENV` | Environment (development/production) | No |
+| Variable               | Description                          | Required |
+| ---------------------- | ------------------------------------ | -------- |
+| `DATABASE_URL`         | PostgreSQL connection string         | Yes      |
+| `DROPBOX_ACCESS_TOKEN` | Dropbox API token                    | Yes      |
+| `SESSION_SECRET`       | Session encryption key               | Yes      |
+| `NODE_ENV`             | Environment (development/production) | No       |
 
 ## 🚀 Deployment
 
 ### Production Mode (24/7)
 
 **Using PM2 (Recommended):**
+
 ```bash
 npm install -g pm2
 pm2 start "npx tsx server/index.ts" --name forum-server
@@ -192,11 +210,13 @@ pm2 startup
 ```
 
 **Windows:**
+
 ```bash
 start-server.bat
 ```
 
 **Linux/Mac:**
+
 ```bash
 while true; do npx tsx server/index.ts; echo "Server crashed, restarting in 5 seconds..."; sleep 5; done
 ```
